@@ -1,0 +1,16 @@
+.card {
+  width: 250px;
+  height: 300px;
+  background-color: var(--psi);
+  border-radius: 40px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+  & p {
+    position: relative;
+    left: 25px;
+  }
+}
+.imagen {
+  position: relative;
+  left: calc(50% - 75px);
+}

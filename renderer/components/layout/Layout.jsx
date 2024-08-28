@@ -5,9 +5,8 @@ import styles from "./layout.module.css";
 import { Fragment } from "react";
 
 const Layout = ({ children, page }) => {
-  console.log(page);
   return (
-    <Fragment className={styles.layoutContainer}>
+    <Fragment>
       <Head>
         <title>{page} | VASA</title>
       </Head>

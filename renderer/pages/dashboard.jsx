@@ -5,6 +5,7 @@ const Dashboard = () => {
   return (
     <Layout page={"Inicio"}>
       <GlobalStyle />
+      <p>Bienvenido al Software de Manejo de Recursos Humanos</p>
     </Layout>
   );
 };
