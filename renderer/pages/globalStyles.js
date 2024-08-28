@@ -5,10 +5,10 @@ const GlobalStyle = createGlobalStyle`
    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
       Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
     font-size:18px;
-  --alpha: #E71D36;
-  --beta: #EA2E33;
-  --gamma: #ED3E30;
-  --delta:#F35E29;
+  --alpha: #BF182D;
+  --beta: #E71D36;
+  --gamma: #EA2E33;
+  --delta:#ED3E30;
   --epsilon:#FF9F1C;
   --psi:#FECF8C;
   --omega: #FDFFFC;

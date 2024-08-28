@@ -1,12 +1,12 @@
 import Layout from "../components/layout/layout";
 import GlobalStyle from "./globalStyles";
 
-const Dashboard = () => {
+const Tables = () => {
   return (
-    <Layout page={"Inicio"}>
+    <Layout page={"Tablas"}>
       <GlobalStyle />
     </Layout>
   );
-};
+}
 
-export default Dashboard;
+export default Tables;

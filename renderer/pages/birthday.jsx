@@ -1,12 +1,12 @@
 import Layout from "../components/layout/layout";
 import GlobalStyle from "./globalStyles";
 
-const Dashboard = () => {
+const Birthday = () => {
   return (
-    <Layout page={"Inicio"}>
+    <Layout page={"Cumpleaños"}>
       <GlobalStyle />
     </Layout>
   );
 };
 
-export default Dashboard;
+export default Birthday;
