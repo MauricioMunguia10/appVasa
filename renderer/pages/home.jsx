@@ -16,7 +16,7 @@ export default function HomePage() {
     <Fragment>
       <GlobalStyle />
       <Head>
-        <title>Log In | MMG</title>
+        <title>Log In | VASA</title>
       </Head>
       <div className={styles.container}>
         <div className={styles.card}>

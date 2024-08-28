@@ -16,7 +16,7 @@ const SignIn = () => {
     <Fragment>
       <GlobalStyle />
       <Head>
-        <title>Sign In | MMG</title>
+        <title>Sign In | VASA</title>
       </Head>
       <div className={styles.container}>
         <div className={styles.card}>

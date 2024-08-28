@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "my-nextron-app",
-  "description": "My application description",
+  "name": "VASA-RH",
+  "description": "Aplicación para uso de Recursos Humanos",
   "version": "1.0.0",
-  "author": "Yoshihide Shiono <shiono.yoshihide@gmail.com>",
+  "author": "MMG",
   "main": "app/background.js",
   "scripts": {
     "dev": "nextron",

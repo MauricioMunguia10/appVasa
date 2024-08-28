@@ -6,7 +6,7 @@ export default function About() {
   return (
     <React.Fragment>
       <Head>
-        <title>About | MMG</title>
+        <title>About | VASA</title>
       </Head>
       <div>
         <Link href="/home">Go to Home page</Link>
