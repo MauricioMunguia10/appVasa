@@ -25,7 +25,6 @@ const Birthday = () => {
     const today = new Date();
     const year = today.getFullYear();
 
-    // Ordenar empleados por la próxima fecha de cumpleaños
     const sortedEmpleados = [...employee].sort((a, b) => {
       const dateA = new Date(a.date_of_birth);
       const dateB = new Date(b.date_of_birth);
@@ -51,7 +50,7 @@ const Birthday = () => {
       console.log(filtered);
       setFilteredEmpleados(filtered);
     }
-    console.log("Filtered Employees:", filteredEmpleados); // Verifica los empleados filtrados
+    console.log("Filtered Employees:", filteredEmpleados);
   }, [month, empleados]);
 
   const handleChange = (event) => {
@@ -61,13 +60,14 @@ const Birthday = () => {
   return (
     <Layout page={"Cumpleaños"}>
       <GlobalStyle />
+      <p>Próximos cumpleañeros</p>
       <div className={styles.carrusel}>
         <div className={styles.sliderContainer}>
           <Slider {...settings}>
             {filteredEmpleados.map((empleado) => (
               <CardBirthday
                 data={empleado}
-                key={empleado.id} // Usa una clave única
+                key={empleado.id}
                 className={styles.slickSlide}
               />
             ))}
