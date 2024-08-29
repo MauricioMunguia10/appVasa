@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
   --epsilon:#FF9F1C;
   --psi:#FECF8C;
   --omega: #FDFFFC;
+  background-color:#d3d3d3;
 
 }
   body,  html, #__next  {

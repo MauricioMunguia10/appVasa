@@ -4,17 +4,28 @@ import CardBirthday from "../components/cardBirthday/CardBirthday";
 import { useEffect, useState } from "react";
 import { employee } from "../lib/data";
 import styles from "../styles/birthday.module.css";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { MenuItem, Select, InputLabel, FormControl } from "@mui/material";
 
 const Birthday = () => {
-  const [formattedDate, setFormattedDate] = useState("");
   const [empleados, setEmpleados] = useState([]);
+  const [filteredEmpleados, setFilteredEmpleados] = useState([]);
+  const [month, setMonth] = useState("");
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+  };
 
   useEffect(() => {
     const today = new Date();
     const year = today.getFullYear();
-    const month = String(today.getMonth() + 1).padStart(2, "0");
-    const day = String(today.getDate()).padStart(2, "0");
 
+    // Ordenar empleados por la próxima fecha de cumpleaños
     const sortedEmpleados = [...employee].sort((a, b) => {
       const dateA = new Date(a.date_of_birth);
       const dateB = new Date(b.date_of_birth);
@@ -29,13 +40,39 @@ const Birthday = () => {
     setEmpleados(sortedEmpleados);
   }, []);
 
+  useEffect(() => {
+    if (month === "") {
+      setFilteredEmpleados(empleados);
+    } else {
+      const filtered = empleados.filter((empleado) => {
+        const monthOfBirthday = new Date(empleado.date_of_birth).getMonth();
+        return monthOfBirthday === parseInt(month);
+      });
+      console.log(filtered);
+      setFilteredEmpleados(filtered);
+    }
+    console.log("Filtered Employees:", filteredEmpleados); // Verifica los empleados filtrados
+  }, [month, empleados]);
+
+  const handleChange = (event) => {
+    setMonth(event.target.value);
+  };
+
   return (
     <Layout page={"Cumpleaños"}>
       <GlobalStyle />
       <div className={styles.carrusel}>
-        {empleados.map((empleado, index) => (
-          <CardBirthday data={empleado} key={index} />
-        ))}
+        <div className={styles.sliderContainer}>
+          <Slider {...settings}>
+            {filteredEmpleados.map((empleado) => (
+              <CardBirthday
+                data={empleado}
+                key={empleado.id} // Usa una clave única
+                className={styles.slickSlide}
+              />
+            ))}
+          </Slider>
+        </div>
       </div>
     </Layout>
   );
