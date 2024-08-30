@@ -23,7 +23,7 @@ const Profile = () => {
       >
         <p onClick={changeImage}>...en proceso...</p>
         <Image
-          src="/images/homer.jpg"
+          src="/images/homer.jpg" 
           alt="homer"
           width={500}
           height={500}

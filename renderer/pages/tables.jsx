@@ -6,6 +6,7 @@ const Tables = () => {
   return (
     <Layout page={"Tablas"}>
       <GlobalStyle />
+      <p>Tabla de empleados</p>
       <Tabla />
     </Layout>
   );
